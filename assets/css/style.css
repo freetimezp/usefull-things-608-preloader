@@ -1,11 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    list-style: none;
-    list-style-type: none;
 }
 
-a {
-    text-decoration: none;
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: "Inter", sans-serif;
+}
+
+.pre-welcome,
+.welcome {
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.pre-welcome .line,
+.welcome .line {
+    height: 24px;
+    font-size: 20px;
+    margin-block: 8px;
+    overflow: hidden;
+}
+
+.welcome .line {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.pre-welcome .line p {
+    transform: translateY(-100%);
+}
+
+.welcome .line p {
+    transform: translateY(100%);
+}
+
+.pre-welcome,
+.welcome {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+}
+
+.welcome {
+    z-index: 10;
+}
+
+.numbers {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    overflow: hidden;
+}
+
+.number {
+    height: 80px;
+    overflow: hidden;
+}
+
+.number-1 .number-wrap {
+    transform: translateY(100%);
+}
+
+.number-wrap {
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+}
+
+.number-wrap span {
+    height: 80px;
+    line-height: 80px;
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.percentage {
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-left: 4px;
+    align-self: start;
+}
+
+.number-2 .number-wrap,
+.number-3 .number-wrap {
+    height: 800px;
+}
+
+.number-1 .number-wrap {
+    height: 80px;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 0;
+    background-color: #f1c40f;
+    z-index: 5;
 }
